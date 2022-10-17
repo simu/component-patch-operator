@@ -1,10 +1,26 @@
 parameters:
   kapitan:
+    dependencies:
+      - type: helm
+        source: ${patch_operator:charts:patch-operator:source}
+        chart_name: patch-operator
+        version: ${patch_operator:charts:patch-operator:version}
+        output_path: ${_base_directory}/helmcharts/${patch_operator:charts:patch-operator:version}
+
     compile:
       - input_paths:
           - ${_base_directory}/component/app.jsonnet
         input_type: jsonnet
         output_path: apps/
+      - input_paths:
+          - ${_base_directory}/helmcharts/${patch_operator:charts:patch-operator:version}
+        input_type: helm
+        output_type: yaml
+        helm_values: ${patch_operator:helm_values}
+        helm_params:
+          name: patch-operator
+          namespace: ${patch_operator:namespace}
+        output_path: patch-operator/01_helm_chart
       - input_paths:
           - ${_base_directory}/component/main.jsonnet
         input_type: jsonnet

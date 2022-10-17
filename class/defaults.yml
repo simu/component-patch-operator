@@ -2,3 +2,10 @@ parameters:
   patch_operator:
     =_metadata: {}
     namespace: syn-patch-operator
+
+    charts:
+      patch-operator:
+        source: https://redhat-cop.github.io/patch-operator
+        version: v0.1.9
+
+    helm_values: {}
