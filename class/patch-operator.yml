@@ -28,4 +28,7 @@ parameters:
 
   commodore:
     postprocess:
-      filters: []
+      filters:
+        - type: jsonnet
+          filter: postprocess/fixup-helm-chart.jsonnet
+          path: patch-operator/01_helm_chart/patch-operator/templates

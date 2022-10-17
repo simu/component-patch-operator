@@ -8,6 +8,6 @@ roleRef:
   kind: Role
   name: patch-operator-prometheus-k8s
 subjects:
-  - kind: ServiceAccount
-    name: prometheus-k8s
-    namespace: openshift-monitoring
+- kind: ServiceAccount
+  name: prometheus-k8s
+  namespace: openshift-monitoring

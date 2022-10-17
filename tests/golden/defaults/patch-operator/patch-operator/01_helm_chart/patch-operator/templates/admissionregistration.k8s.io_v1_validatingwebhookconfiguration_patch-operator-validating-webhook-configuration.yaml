@@ -6,22 +6,22 @@ metadata:
   creationTimestamp: null
   name: patch-operator-validating-webhook-configuration
 webhooks:
-  - admissionReviewVersions:
-      - v1
-    clientConfig:
-      service:
-        name: patch-operator-webhook-service
-        namespace: syn-patch-operator
-        path: /validate-redhatcop-redhat-io-v1alpha1-patch
-    failurePolicy: Fail
-    name: vpatch.kb.io
-    rules:
-      - apiGroups:
-          - redhatcop.redhat.io
-        apiVersions:
-          - v1alpha1
-        operations:
-          - UPDATE
-        resources:
-          - patches
-    sideEffects: None
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    service:
+      name: patch-operator-webhook-service
+      namespace: syn-patch-operator
+      path: /validate-redhatcop-redhat-io-v1alpha1-patch
+  failurePolicy: Fail
+  name: vpatch.kb.io
+  rules:
+  - apiGroups:
+    - redhatcop.redhat.io
+    apiVersions:
+    - v1alpha1
+    operations:
+    - UPDATE
+    resources:
+    - patches
+  sideEffects: None

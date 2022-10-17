@@ -7,6 +7,6 @@ roleRef:
   kind: ClusterRole
   name: patch-operator-manager-role
 subjects:
-  - kind: ServiceAccount
-    name: controller-manager
-    namespace: syn-patch-operator
+- kind: ServiceAccount
+  name: controller-manager
+  namespace: syn-patch-operator

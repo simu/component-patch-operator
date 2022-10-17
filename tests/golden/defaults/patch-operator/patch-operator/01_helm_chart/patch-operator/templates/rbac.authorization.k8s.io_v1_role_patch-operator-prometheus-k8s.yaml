@@ -4,13 +4,13 @@ metadata:
   name: patch-operator-prometheus-k8s
   namespace: syn-patch-operator
 rules:
-  - apiGroups:
-      - ''
-    resources:
-      - endpoints
-      - pods
-      - services
-    verbs:
-      - get
-      - list
-      - watch
+- apiGroups:
+  - ''
+  resources:
+  - endpoints
+  - pods
+  - services
+  verbs:
+  - get
+  - list
+  - watch

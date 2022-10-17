@@ -7,17 +7,17 @@ metadata:
   namespace: syn-patch-operator
 spec:
   endpoints:
-    - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
-      interval: 30s
-      port: https
-      scheme: https
-      tlsConfig:
-        ca:
-          secret:
-            key: tls.crt
-            name: patch-operator-certs
-            optional: false
-        serverName: patch-operator-controller-manager-metrics-service.syn-patch-operator.svc
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    interval: 30s
+    port: https
+    scheme: https
+    tlsConfig:
+      ca:
+        secret:
+          key: tls.crt
+          name: patch-operator-certs
+          optional: false
+      serverName: patch-operator-controller-manager-metrics-service.syn-patch-operator.svc
   selector:
     matchLabels:
       control-plane: patch-operator
