@@ -1,6 +1,8 @@
 parameters:
   patch_operator:
-    =_metadata: {}
+    =_metadata:
+      library_aliases:
+        resource-locker.libjsonnet: patch-operator-migrate.libsonnet
     namespace: syn-patch-operator
 
     charts:
