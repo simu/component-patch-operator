@@ -1,0 +1,4 @@
+parameters:
+  patch_operator:
+    =_metadata: {}
+    namespace: syn-patch-operator

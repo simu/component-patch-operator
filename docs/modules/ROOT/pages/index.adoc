@@ -1,0 +1,5 @@
+= patch-operator
+
+patch-operator is a Commodore component to manage patch-operator.
+
+See the xref:references/parameters.adoc[parameters] reference for further details.

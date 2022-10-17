@@ -1,0 +1,25 @@
+{
+  "template": "https://github.com/projectsyn/commodore-component-template.git",
+  "commit": "defbf02e67854458888ecfbd890e5575f1bafab8",
+  "checkout": "main",
+  "context": {
+    "cookiecutter": {
+      "name": "patch-operator",
+      "slug": "patch-operator",
+      "parameter_key": "patch_operator",
+      "test_cases": "defaults",
+      "add_lib": "y",
+      "add_pp": "y",
+      "add_golden": "y",
+      "add_matrix": "y",
+      "add_go_unit": "n",
+      "copyright_holder": "VSHN AG <info@vshn.ch>",
+      "copyright_year": "2022",
+      "github_owner": "projectsyn",
+      "github_name": "component-patch-operator",
+      "github_url": "https://github.com/projectsyn/component-patch-operator",
+      "_template": "https://github.com/projectsyn/commodore-component-template.git"
+    }
+  },
+  "directory": null
+}

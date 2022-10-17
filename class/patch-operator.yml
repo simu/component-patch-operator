@@ -1,0 +1,15 @@
+parameters:
+  kapitan:
+    compile:
+      - input_paths:
+          - ${_base_directory}/component/app.jsonnet
+        input_type: jsonnet
+        output_path: apps/
+      - input_paths:
+          - ${_base_directory}/component/main.jsonnet
+        input_type: jsonnet
+        output_path: patch-operator/
+
+  commodore:
+    postprocess:
+      filters: []
