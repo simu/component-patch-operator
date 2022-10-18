@@ -1,4 +1,16 @@
 parameters:
   patch_operator:
-    =_metadata: {}
+    =_metadata:
+      replaces: resource-locker
+      library_aliases:
+        resource-locker.libjsonnet: patch-operator-migrate.libsonnet
     namespace: syn-patch-operator
+
+    charts:
+      patch-operator:
+        source: https://redhat-cop.github.io/patch-operator
+        version: v0.1.9
+
+    helm_values:
+      # TODO(sg): figure out how to handle this properly on OCP4
+      enableCertManager: true
